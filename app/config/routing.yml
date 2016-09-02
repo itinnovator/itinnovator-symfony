@@ -1,0 +1,17 @@
+core:
+    resource: "@CoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+projects:
+    resource: "@ProjectsBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+homepage:
+    path:      /test2
+    defaults:  { _controller: AppBundle:Default:test}

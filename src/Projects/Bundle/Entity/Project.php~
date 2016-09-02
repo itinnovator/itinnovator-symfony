@@ -1,0 +1,75 @@
+<?php
+
+namespace Projects\Bundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+* @ORM\Entity
+* @ORM\Table(name="projects")
+*/
+class Project
+{
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $project_title;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $project_description;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $project_duration;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $min_budget_price;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $max_budget_price;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $id_user;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $id_website;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $id_lang;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $ip;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $browser;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $created_at = '0000-00-00';
+
+}
