@@ -10,68 +10,82 @@ use Doctrine\ORM\Mapping as ORM;
 */
 class Project
 {
-    /**
-     * @ORM\Id
+	/**
      * @ORM\Column(type="integer")
+     * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    protected $id;
+    private $id;
 
-    /**
+	/**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $project_title;
+
+	/**
      * @ORM\Column(type="string")
      */
-    protected $project_title;
+    private $project_description;
 
-    /**
-     * @ORM\Column(type="string")
+	/**
+     * @ORM\Column(type="string", length=255)
      */
-    protected $project_description;
+    private $project_duration;
 
-    /**
-     * @ORM\Column(type="string")
+	/**
+     * @ORM\Column(type="decimal", scale=2)
      */
-    protected $project_duration;
+    private $min_budget_price;
 
-    /**
-     * @ORM\Column(type="string")
+	/**
+     * @ORM\Column(type="decimal", scale=2)
      */
-    protected $min_budget_price;
+    private $max_budget_price;
 
-    /**
-     * @ORM\Column(type="string")
+	/**
+     * @ORM\Column(type="decimal", scale=2)
      */
-    protected $max_budget_price;
+    private $approved_price;
 
-    /**
+	/**
      * @ORM\Column(type="integer")
      */
-    protected $id_user;
+    private $id_user;
 
-    /**
+	/**
      * @ORM\Column(type="integer")
      */
-    protected $id_website;
+    private $id_currency;
 
-    /**
+	/**
      * @ORM\Column(type="integer")
      */
-    protected $id_lang;
+    private $status;
 
-    /**
+	/**
+     * @ORM\Column(type="integer")
+     */
+    private $id_website;
+
+	/**
+     * @ORM\Column(type="integer")
+     */
+    private $id_lang;
+
+	/**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $ip;
+
+	/**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $browser;
+
+	/**
      * @ORM\Column(type="string")
      */
-    protected $ip;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    protected $browser;
-
-    /**
-     * @ORM\Column(type="string")
-     */
-    protected $created_at = '0000-00-00';
-
+    private $created_at = "0000-00-00";
 
     /**
      * Get id
@@ -110,7 +124,7 @@ class Project
     /**
      * Set projectDescription
      *
-     * @param string $projectDescription
+     * @param $projectDescription
      *
      * @return Project
      */
@@ -124,7 +138,7 @@ class Project
     /**
      * Get projectDescription
      *
-     * @return string
+     * @return \longtext
      */
     public function getProjectDescription()
     {
@@ -204,6 +218,30 @@ class Project
     }
 
     /**
+     * Set approvedPrice
+     *
+     * @param string $approvedPrice
+     *
+     * @return Project
+     */
+    public function setApprovedPrice($approvedPrice)
+    {
+        $this->approved_price = $approvedPrice;
+
+        return $this;
+    }
+
+    /**
+     * Get approvedPrice
+     *
+     * @return string
+     */
+    public function getApprovedPrice()
+    {
+        return $this->approved_price;
+    }
+
+    /**
      * Set idUser
      *
      * @param integer $idUser
@@ -225,6 +263,54 @@ class Project
     public function getIdUser()
     {
         return $this->id_user;
+    }
+
+    /**
+     * Set idCurrency
+     *
+     * @param integer $idCurrency
+     *
+     * @return Project
+     */
+    public function setIdCurrency($idCurrency)
+    {
+        $this->id_currency = $idCurrency;
+
+        return $this;
+    }
+
+    /**
+     * Get idCurrency
+     *
+     * @return integer
+     */
+    public function getIdCurrency()
+    {
+        return $this->id_currency;
+    }
+
+    /**
+     * Set status
+     *
+     * @param integer $status
+     *
+     * @return Project
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * Get status
+     *
+     * @return integer
+     */
+    public function getStatus()
+    {
+        return $this->status;
     }
 
     /**
@@ -326,13 +412,13 @@ class Project
     /**
      * Set createdAt
      *
-     * @param string $createdAt
+     * @param \DateTime $createdAt
      *
      * @return Project
      */
     public function setCreatedAt($createdAt)
     {
-        $this->created_at = $createdAt;
+        $this->created_at = new \DateTime($createdAt);
 
         return $this;
     }
@@ -340,7 +426,7 @@ class Project
     /**
      * Get createdAt
      *
-     * @return string
+     * @return \DateTime
      */
     public function getCreatedAt()
     {

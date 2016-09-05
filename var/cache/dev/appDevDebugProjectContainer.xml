@@ -17,6 +17,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="AppBundle">AppBundle\AppBundle</parameter>
       <parameter key="ProjectsBundle">Projects\Bundle\ProjectsBundle</parameter>
+      <parameter key="CoreBundle">Core\Bundle\CoreBundle</parameter>
       <parameter key="DebugBundle">Symfony\Bundle\DebugBundle\DebugBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -24,7 +25,7 @@
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
-    <parameter key="database_host">localhost</parameter>
+    <parameter key="database_host">127.0.0.1</parameter>
     <parameter key="database_port">null</parameter>
     <parameter key="database_name">itinnovator-symfony</parameter>
     <parameter key="database_user">jigesh</parameter>
@@ -488,7 +489,7 @@
                   <tag name="cache.pool"/>
                   <argument>Wg+qkmkcMO</argument>
                   <argument></argument>
-                  <argument>VtE1-IYQdYX63TkWpBHDjA</argument>
+                  <argument>QjeI+bxQXPIms4YlzGunJw</argument>
                   <argument>C:\server\www\itinnovator-symfony\var\cache\dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -501,7 +502,7 @@
                   <tag name="cache.pool"/>
                   <argument>zNH7UAwsl-</argument>
                   <argument></argument>
-                  <argument>VtE1-IYQdYX63TkWpBHDjA</argument>
+                  <argument>QjeI+bxQXPIms4YlzGunJw</argument>
                   <argument>C:\server\www\itinnovator-symfony\var\cache\dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -833,7 +834,7 @@
       <tag name="cache.pool"/>
       <argument>NzsrsvxDtB</argument>
       <argument></argument>
-      <argument>VtE1-IYQdYX63TkWpBHDjA</argument>
+      <argument>QjeI+bxQXPIms4YlzGunJw</argument>
       <argument>C:\server\www\itinnovator-symfony\var\cache\dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1569,7 +1570,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>578feb5417ef42.53248442</argument>
+            <argument>57cd767f99bdc8.37074747</argument>
           </service>
         </argument>
       </argument>
@@ -1703,7 +1704,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>578feb5417ef42.53248442</argument>
+            <argument>57cd767f99bdc8.37074747</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -2001,7 +2002,7 @@
     <service id="doctrine.dbal.default_connection" class="Doctrine\DBAL\Connection">
       <argument type="collection">
         <argument key="driver">pdo_mysql</argument>
-        <argument key="host">localhost</argument>
+        <argument key="host">127.0.0.1</argument>
         <argument key="port">null</argument>
         <argument key="dbname">itinnovator-symfony</argument>
         <argument key="user">jigesh</argument>
@@ -2550,6 +2551,10 @@
       <call method="addPath">
         <argument>C:\server\www\itinnovator-symfony\src\Projects\Bundle/Resources/views</argument>
         <argument>Projects</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\server\www\itinnovator-symfony\src\Core\Bundle/Resources/views</argument>
+        <argument>Core</argument>
       </call>
       <call method="addPath">
         <argument>C:\server\www\itinnovator-symfony\vendor\symfony\symfony\src\Symfony\Bundle\DebugBundle/Resources/views</argument>

@@ -1,12 +1,25 @@
 # This file is auto-generated during the composer install
 parameters:
-    database_host: localhost
+    database_host: itinnovator.in
     database_port: null
-    database_name: itinnovator-symfony
-    database_user: jigesh
-    database_password: admin
+    database_name: initinno_itinnovator_symfony
+    database_user: initinno_jigesh
+    database_password: Ravalera1#
     mailer_transport: smtp
     mailer_host: localhost
     mailer_user: null
     mailer_password: null
     secret: ThisTokenIsNotSoSecretChangeIt
+
+# This file is auto-generated during the composer install
+#parameters:
+#    database_host: itinnovator.in
+#    database_port: null
+#    database_name: initinno_itinnovator_symfony
+#    database_user: initinno_jigesh
+#    database_password: Ravalera1#
+#    mailer_transport: smtp
+#    mailer_host: localhost
+#    mailer_user: null
+#    mailer_password: null
+#    secret: ThisTokenIsNotSoSecretChangeIt
